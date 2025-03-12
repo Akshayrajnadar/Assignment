@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "e5c6f07b-f2ca-4d10-95a4-821655765769",
+		"name": "School",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36655713"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/addSchool",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Royal International School\",\r\n    \"address\":\"12 King Street, London, UK\",\r\n    \"latitude\":\"51.5074\",\r\n    \"longitude\":\"-0.1278\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignment-k6pu.onrender.com/api/addSchool",
+					"protocol": "https",
+					"host": [
+						"assignment-k6pu",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/listSchools?latitude=40.7128&longitude=-74.006",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignment-k6pu.onrender.com/api/listSchools?latitude=40.7128&longitude=-74.006",
+					"protocol": "https",
+					"host": [
+						"assignment-k6pu",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "40.7128"
+						},
+						{
+							"key": "longitude",
+							"value": "-74.006"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
