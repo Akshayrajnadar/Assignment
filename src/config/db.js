@@ -23,7 +23,7 @@ const pool = mysql.createPool({
 const testDatabaseConnection = async () => {
     try {
         const connection = await pool.getConnection();
-        console.log('✅ Connected to MySQL on Railway');
+        console.log('✅ Connected to MySQL');
         connection.release(); // Release the connection after successful check
     } catch (error) {
         console.error('❌ MySQL Connection Error:', error.message);
