@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('🚀 School Management API is Running!');
+    res.send('School Management API is Running!');
 });
 
 app.use('/api', schoolRoutes);
