@@ -10,12 +10,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// ✅ Root Route to Check API Status
 app.get('/', (req, res) => {
     res.send('🚀 School Management API is Running!');
 });
 
-// ✅ Use API Routes
 app.use('/api', schoolRoutes);
 
 app.listen(PORT, () => {
